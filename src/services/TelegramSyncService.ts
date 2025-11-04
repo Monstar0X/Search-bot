@@ -168,7 +168,7 @@ export class TelegramSyncService {
       // Get member count (may not always be available for private channels)
       let memberCount = 0;
       try {
-        const chatMembersCount = await this.bot.getChatMembersCount(channelId);
+        const chatMembersCount = await this.bot.getChatMemberCount(channelId);
         memberCount = chatMembersCount;
       } catch (error) {
         logger.debug(`Could not get member count for channel ${channelId}: ${error}`);
