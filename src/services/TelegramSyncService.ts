@@ -198,8 +198,8 @@ export class TelegramSyncService {
       return {
         telegram_id: chat.id,
         name: chat.title || `Channel ${chat.id}`,
-        username: chat.username || undefined,
-        description: chat.description || undefined,
+        username: chat.username,
+        description: chat.description,
         type: channelType,
         invite_link: inviteLink,
         member_count: memberCount,
