@@ -5,6 +5,12 @@ import { InlineKeyboards } from '../keyboards/InlineKeyboards';
 import { channelModel } from '../../../models/Channel';
 
 export class WelcomeHandler {
+  private bot: TelegramBot;
+
+  constructor(bot: TelegramBot) {
+    this.bot = bot;
+  }
+
   async handleWelcome(msg: TelegramBot.Message): Promise<void> {
     try {
       const chatId = msg.chat.id;
@@ -29,7 +35,7 @@ ${welcomeMessage}
 🔍 *Searches this week:* ${searchStats}`;
 
       // Send welcome message with inline keyboard
-      await msg.chat.telegram.sendMessage(chatId, personalizedWelcome, {
+      await this.bot.sendMessage(chatId, personalizedWelcome, {
         parse_mode: 'MarkdownV2',
         reply_markup: InlineKeyboards.getWelcomeKeyboard()
       });
