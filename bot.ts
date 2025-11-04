@@ -74,7 +74,7 @@ class SwordsmithBot {
       logger.error('Telegram polling error:', error);
 
       // Don't exit on ECONNRESET or temporary network issues
-      if (error.code === 'ETELEGRAM') {
+      if ((error as any).code === 'ETELEGRAM') {
         logger.warn('Telegram API error, will retry...');
         return;
       }
