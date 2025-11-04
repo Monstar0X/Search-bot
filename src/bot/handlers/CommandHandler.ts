@@ -124,7 +124,7 @@ export class CommandHandler {
       const chatId = callbackQuery.message?.chat.id;
 
       if (!chatId || !action) {
-        await this.bot.answerCallbackQuery(callbackQuery.id, 'Invalid request');
+        await this.bot.answerCallbackQuery(callbackQuery.id);
         return;
       }
 
