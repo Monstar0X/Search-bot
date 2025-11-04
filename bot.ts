@@ -36,7 +36,7 @@ class SwordsmithBot {
 
   constructor() {
     // Initialize bot with polling
-    this.bot = new TelegramBot(BOT_TOKEN, {
+    this.bot = new TelegramBot(BOT_TOKEN!, {
       polling: {
         interval: 1000,
         autoStart: true,
