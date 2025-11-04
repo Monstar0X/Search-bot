@@ -2,7 +2,7 @@ import { Channel } from '../models/Channel';
 
 export class MessageFormatter {
   // Escape special characters for MarkdownV2
-  private static escapeMarkdownV2(text: string): string {
+  static escapeMarkdownV2(text: string): string {
     const specialChars = ['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!'];
     return text.replace(new RegExp(`[${specialChars.join('\\\\')}]`, 'g'), '\\$&');
   }
