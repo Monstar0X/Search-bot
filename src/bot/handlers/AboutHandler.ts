@@ -203,15 +203,16 @@ We'd love to hear them! Contact us with your ideas.`;
     }
   }
 
-  // Helper method to send messages (would need bot instance)
+  // Helper method to send messages
   private async sendMessage(
     chatId: number,
     text: string,
     options?: any
   ): Promise<TelegramBot.Message> {
-    // This is a placeholder - in the actual implementation,
-    // the bot instance would be passed to the handler or available via dependency injection
-    throw new Error('Bot instance not available in this method');
+    return await this.bot.sendMessage(chatId, text, {
+      parse_mode: 'MarkdownV2',
+      ...options
+    });
   }
 
   // Helper method to format relative time (if MessageFormatter is not accessible)
