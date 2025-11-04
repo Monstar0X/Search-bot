@@ -2,7 +2,7 @@ import TelegramBot from 'node-telegram-bot-api';
 import logger from '../../utils/logger';
 import { MessageFormatter } from '../../utils/MessageFormatter';
 import { InlineKeyboards } from '../keyboards/InlineKeyboards';
-import { channelModel } from '../../../models/Channel';
+import { channelModel } from '../../models/Channel';
 
 export class SearchHandler {
   private bot: TelegramBot;
