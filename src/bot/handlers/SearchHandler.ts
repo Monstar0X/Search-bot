@@ -5,9 +5,11 @@ import { InlineKeyboards } from '../keyboards/InlineKeyboards';
 import { channelModel } from '../../../models/Channel';
 
 export class SearchHandler {
+  private bot: TelegramBot;
   private maxResults: number;
 
-  constructor() {
+  constructor(bot: TelegramBot) {
+    this.bot = bot;
     this.maxResults = parseInt(process.env.MAX_SEARCH_RESULTS || '5');
   }
 
