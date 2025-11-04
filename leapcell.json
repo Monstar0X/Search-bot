@@ -1,0 +1,66 @@
+{
+  "name": "swordsmith-channel-search-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for searching through owned anime and swordsmithing channels",
+  "main": "dist/bot-webhook.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/bot-webhook.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "environment": {
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token from @BotFather",
+      "required": true,
+      "type": "string"
+    },
+    "OWNER_TELEGRAM_ID": {
+      "description": "Your Telegram User ID",
+      "required": true,
+      "type": "string"
+    },
+    "WEBHOOK_URL": {
+      "description": "Webhook URL provided by Leapcell",
+      "required": true,
+      "type": "string"
+    },
+    "PORT": {
+      "description": "Port number (usually provided by platform)",
+      "required": false,
+      "type": "string",
+      "default": "3000"
+    },
+    "DATABASE_PATH": {
+      "description": "Database file path",
+      "required": false,
+      "type": "string",
+      "default": "./data/channels.db"
+    },
+    "MAX_SEARCH_RESULTS": {
+      "description": "Maximum search results",
+      "required": false,
+      "type": "string",
+      "default": "5"
+    },
+    "SEARCH_HISTORY_ENABLED": {
+      "description": "Enable search history",
+      "required": false,
+      "type": "string",
+      "default": "true"
+    },
+    "SYNC_INTERVAL_HOURS": {
+      "description": "Sync interval in hours",
+      "required": false,
+      "type": "string",
+      "default": "24"
+    },
+    "LOG_LEVEL": {
+      "description": "Logging level",
+      "required": false,
+      "type": "string",
+      "default": "info"
+    }
+  }
+}
