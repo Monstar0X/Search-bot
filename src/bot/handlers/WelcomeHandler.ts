@@ -107,9 +107,4 @@ ${welcomeMessage}`;
     }
   }
 
-  // Static method to escape markdown (since MessageFormatter might not be accessible)
-  private static escapeMarkdownV2(text: string): string {
-    const specialChars = ['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!'];
-    return text.replace(new RegExp(`[${specialChars.join('\\\\')}]`, 'g'), '\\$&');
   }
-}
