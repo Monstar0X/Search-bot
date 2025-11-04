@@ -265,7 +265,7 @@ ${escapedMessage}`;
   }
 
   // Helper method to format relative time
-  private static formatRelativeTime(dateString: string): string {
+  static formatRelativeTime(dateString: string): string {
     const date = new Date(dateString);
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
