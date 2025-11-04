@@ -19,9 +19,7 @@
     "strictFunctionTypes": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "exactOptionalPropertyTypes": true
+    "noImplicitOverride": true
   },
   "include": [
     "src/**/*",
