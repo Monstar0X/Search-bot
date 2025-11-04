@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  swordsmith-bot:
+    build: .
+    container_name: swordsmith-channel-search-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - BOT_TOKEN=${BOT_TOKEN}
+      - OWNER_TELEGRAM_ID=${OWNER_TELEGRAM_ID}
+      - DATABASE_PATH=./data/channels.db
+      - MAX_SEARCH_RESULTS=5
+      - SEARCH_HISTORY_ENABLED=true
+      - SYNC_INTERVAL_HOURS=24
+      - QUICK_SYNC_INTERVAL_HOURS=6
+      - LOG_LEVEL=info
+      - LOG_DIR=./logs
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
+
+volumes:
+  bot-data:
+    driver: local
+  bot-logs:
+    driver: local
