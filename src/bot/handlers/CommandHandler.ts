@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import logger from '../../../utils/logger';
+import logger from '../../utils/logger';
 import { WelcomeHandler } from './WelcomeHandler';
 import { SearchHandler } from './SearchHandler';
 import { SupportHandler } from './SupportHandler';
