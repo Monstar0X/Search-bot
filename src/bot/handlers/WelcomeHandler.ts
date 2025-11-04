@@ -62,9 +62,10 @@ ${welcomeMessage}
 
 ${welcomeMessage}`;
 
-      // This would need bot instance passed in constructor or as parameter
-      // For now, this is a placeholder method structure
-      throw new Error('Bot instance not available in this method');
+      await this.bot.sendMessage(chatId, welcomeBackMessage, {
+        parse_mode: 'MarkdownV2',
+        reply_markup: InlineKeyboards.getWelcomeKeyboard()
+      });
     } catch (error) {
       logger.error('Error in welcome back handler:', error);
       throw error;
