@@ -4,6 +4,12 @@ import { MessageFormatter } from '../../../utils/MessageFormatter';
 import { InlineKeyboards } from '../keyboards/InlineKeyboards';
 
 export class SupportHandler {
+  private bot: TelegramBot;
+
+  constructor(bot: TelegramBot) {
+    this.bot = bot;
+  }
+
   async handleSupport(chatId: number): Promise<void> {
     try {
       logger.info(`Support message sent to chat ${chatId}`);
