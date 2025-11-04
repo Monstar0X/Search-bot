@@ -2,13 +2,15 @@
   "name": "swordsmith-channel-search-bot",
   "version": "1.0.0",
   "description": "Telegram bot for searching through owned anime and swordsmithing channels",
-  "main": "dist/server.js",
+  "main": "dist/bot-webhook.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node dist/bot-webhook.js",
     "start:bot": "node dist/bot.js",
-    "dev": "nodemon --exec ts-node server.ts",
+    "start:server": "node dist/server.js",
+    "dev": "nodemon --exec ts-node bot-webhook.ts",
     "dev:bot": "nodemon --exec ts-node bot.ts",
+    "dev:server": "nodemon --exec ts-node server.ts",
     "lint": "eslint src/**/*.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
