@@ -107,6 +107,20 @@ dist
 # Docusaurus cache and generated files
 .docusaurus
 
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Log files
+*.log
+logs/
+
+# Bot specific
+.bot_token
+channels_backup.json
+
 # Serverless directories
 .serverless/
 
