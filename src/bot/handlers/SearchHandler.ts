@@ -199,7 +199,7 @@ Click any term above or type your own search!`;
   // Helper method to delete messages
   private async deleteMessage(chatId: number, messageId: number): Promise<void> {
     try {
-      await this.bot.deleteMessage(chatId, messageId.toString());
+      await this.bot.deleteMessage(chatId, messageId);
     } catch (error) {
       // Ignore delete errors (message might already be deleted)
       logger.debug(`Could not delete message ${messageId}: ${error}`);
