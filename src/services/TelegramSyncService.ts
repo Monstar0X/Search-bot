@@ -11,8 +11,8 @@ export class TelegramSyncService {
   private bot: TelegramBot;
   private ownerTelegramId: number;
   private syncInProgress = false;
-  private syncInterval?: NodeJS.Timeout;
-  private quickSyncInterval?: NodeJS.Timeout;
+  private syncInterval?: ReturnType<typeof setInterval>;
+  private quickSyncInterval?: ReturnType<typeof setInterval>;
 
   constructor(bot: TelegramBot, ownerTelegramId: number) {
     this.bot = bot;
