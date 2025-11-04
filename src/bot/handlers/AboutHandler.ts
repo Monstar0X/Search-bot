@@ -5,6 +5,12 @@ import { InlineKeyboards } from '../keyboards/InlineKeyboards';
 import { channelModel } from '../../../models/Channel';
 
 export class AboutHandler {
+  private bot: TelegramBot;
+
+  constructor(bot: TelegramBot) {
+    this.bot = bot;
+  }
+
   async handleAbout(chatId: number): Promise<void> {
     try {
       logger.info(`About message sent to chat ${chatId}`);
