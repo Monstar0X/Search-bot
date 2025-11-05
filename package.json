@@ -2,10 +2,10 @@
   "name": "swordsmith-channel-search-bot",
   "version": "1.0.0",
   "description": "Telegram bot for searching through owned anime and swordsmithing channels",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node app.js",
+    "start": "node index.js",
     "start:bot": "node dist/bot.js",
     "start:server": "node dist/server.js",
     "start:webhook": "node dist/bot-webhook.js",
